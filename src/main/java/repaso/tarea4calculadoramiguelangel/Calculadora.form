@@ -307,9 +307,6 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JTextField" name="labelPantalla">
-          <Properties>
-            <Property name="text" type="java.lang.String" value=" "/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

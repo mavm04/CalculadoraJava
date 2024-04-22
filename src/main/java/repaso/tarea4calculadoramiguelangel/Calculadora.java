@@ -4,7 +4,6 @@
  */
 package repaso.tarea4calculadoramiguelangel;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +15,8 @@ public class Calculadora extends javax.swing.JFrame {
     /**
      * Creates new form Calculadora
      */
+    private ArrayList<String> numeros = new ArrayList<>();
+    
     public Calculadora() {
         initComponents();
     }
@@ -262,8 +263,6 @@ public class Calculadora extends javax.swing.JFrame {
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        labelPantalla.setText(" ");
-
         javax.swing.GroupLayout jPanelPantallaLayout = new javax.swing.GroupLayout(jPanelPantalla);
         jPanelPantalla.setLayout(jPanelPantallaLayout);
         jPanelPantallaLayout.setHorizontalGroup(
@@ -300,7 +299,7 @@ public class Calculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bonton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton8ActionPerformed
-        
+
     }//GEN-LAST:event_bonton8ActionPerformed
 
     private void bonton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bonton0ActionPerformed
@@ -316,59 +315,63 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonSumaActionPerformed
 
     private void bonton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton7MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"7");
+        labelPantalla.setText(labelPantalla.getText() + "7");
     }//GEN-LAST:event_bonton7MouseClicked
 
     private void bonton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton1MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"1");
+        labelPantalla.setText(labelPantalla.getText() + "1");
     }//GEN-LAST:event_bonton1MouseClicked
 
     private void bonton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton2MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"2");
+        labelPantalla.setText(labelPantalla.getText() + "2");
     }//GEN-LAST:event_bonton2MouseClicked
 
     private void bonton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton3MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"3");
+        labelPantalla.setText(labelPantalla.getText() + "3");
     }//GEN-LAST:event_bonton3MouseClicked
 
     private void bonton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton4MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"4");
+        labelPantalla.setText(labelPantalla.getText() + "4");
     }//GEN-LAST:event_bonton4MouseClicked
 
     private void bonton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton5MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"1");
+        labelPantalla.setText(labelPantalla.getText() + "1");
     }//GEN-LAST:event_bonton5MouseClicked
 
     private void bonton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton6MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"6");
+        labelPantalla.setText(labelPantalla.getText() + "6");
     }//GEN-LAST:event_bonton6MouseClicked
 
     private void bonton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton8MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"8");
+        labelPantalla.setText(labelPantalla.getText() + "8");
     }//GEN-LAST:event_bonton8MouseClicked
 
     private void bonton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton9MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"9");
+        labelPantalla.setText(labelPantalla.getText() + "9");
     }//GEN-LAST:event_bonton9MouseClicked
 
     private void bonton0MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bonton0MouseClicked
-        labelPantalla.setText(labelPantalla.getText()+"0");
+        labelPantalla.setText(labelPantalla.getText() + "0");
     }//GEN-LAST:event_bonton0MouseClicked
 
     private void botonSumaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSumaMouseClicked
-       labelPantalla.setText(labelPantalla.getText()+" + ");
+        numeros.add(labelPantalla.getText());
+        labelPantalla.setText(labelPantalla.getText() + " + ");
     }//GEN-LAST:event_botonSumaMouseClicked
 
     private void botonRestaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonRestaMouseClicked
-        labelPantalla.setText(labelPantalla.getText()+" - ");
+        numeros.add(labelPantalla.getText());
+        labelPantalla.setText(labelPantalla.getText() + " - ");
     }//GEN-LAST:event_botonRestaMouseClicked
 
     private void botonMultiplicacionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMultiplicacionMouseClicked
-        labelPantalla.setText(labelPantalla.getText()+" * ");
+        numeros.add(labelPantalla.getText());
+        labelPantalla.setText(labelPantalla.getText() + " * ");
     }//GEN-LAST:event_botonMultiplicacionMouseClicked
 
     private void botonDivisionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDivisionMouseClicked
-        labelPantalla.setText(labelPantalla.getText()+" / ");
+        numeros.add(labelPantalla.getText());
+        labelPantalla.setText(labelPantalla.getText() + " / ");
     }//GEN-LAST:event_botonDivisionMouseClicked
 
     private void botonCBorrarTodoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCBorrarTodoMouseClicked
@@ -377,17 +380,22 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void botonIgualMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonIgualMouseClicked
         
+        String regex = "\\s";
+        
+        numeros.add(labelPantalla.getText());
+        
         if (labelPantalla.getText().contains("+")) {
-            
-        } else if(labelPantalla.getText().contains("-")){
-            
-        } else if(labelPantalla.getText().contains("*")){
-        
-        } else if(labelPantalla.getText().contains("/")){
-        
+
+        } else if (labelPantalla.getText().contains("-")) {
+
+        } else if (labelPantalla.getText().contains("*")) {
+
+        } else if (labelPantalla.getText().contains("/")) {
+
         } else {
         }
     }//GEN-LAST:event_botonIgualMouseClicked
+
 
     /**
      * @param args the command line arguments
@@ -423,27 +431,27 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
     }
-    
-    public void suma(int num1, int num2){
-        
+
+    public void suma(int num1, int num2) {
+
         int resultado = num1 + num2;
         labelPantalla.setText(" " + resultado);
     }
-    
-    public void resta(int num1, int num2){
-        
+
+    public void resta(int num1, int num2) {
+
         int resultado = num1 - num2;
         labelPantalla.setText(" " + resultado);
     }
-    
-    public void mult(int num1, int num2){
-        
+
+    public void mult(int num1, int num2) {
+
         int resultado = num1 * num2;
         labelPantalla.setText(" " + resultado);
     }
-    
-    public void div(int num1, int num2){
-        
+
+    public void div(int num1, int num2) {
+
         double resultado = num1 / num2;
         labelPantalla.setText(" " + resultado);
     }
